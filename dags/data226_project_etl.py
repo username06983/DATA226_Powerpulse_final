@@ -178,7 +178,7 @@ with DAG(
     dag_id="eia_ETL",
     default_args=default_args,
     start_date=datetime(2025, 8, 1),
-    schedule_interval=timedelta(days=2),  
+    schedule_interval=timedelta(days=8),  
     catchup=False,
     tags=["eia", "snowflake", "etl"],
 ) as dag:
