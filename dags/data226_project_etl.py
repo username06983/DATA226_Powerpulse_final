@@ -30,7 +30,7 @@ BASE_URL = "https://api.eia.gov/v2/electricity/rto/region-data/data/"
 
 @task
 def extract(start: str, end: str):
-    api_key = Variable.get("eia_api")
+    api_key = Variable.get("eia_api_key")
 
     params = {
         "api_key": api_key,
