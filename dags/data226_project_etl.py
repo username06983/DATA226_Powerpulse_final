@@ -14,7 +14,7 @@ from airflow.decorators import task
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 from airflow.hooks.base import BaseHook
 from airflow.models import Variable
-#from airflow.utils.dates import days_ago
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 import requests
 
 from datetime import timedelta
@@ -194,9 +194,14 @@ with DAG(
 
     rows = extract(
         start=start_date.strftime("%Y-%m-%dT%H"),
-        end=end_date.strftime("%Y-%m-%dT%H"),
-    )
-
-
+        end=end_date.strftime("%Y-%m-%dT%H"), )
     records = transform(rows)
-    load(records)
+    load_task = load(records)
+
+
+    trigger_elt = TriggerDagRunOperator(
+    task_id="trigger_elt",
+    trigger_dag_id="eia_ELT_dbt", 
+)
+
+rows >> records >> load_task >> trigger_elt
