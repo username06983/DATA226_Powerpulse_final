@@ -32,51 +32,33 @@ Coverage: Multi-year (historical trends)
 
 
 ## Architecture
+
 Orchestration – Apache Airflow
-
-Schedules ETL & ELT pipelines
-
-Extracts data from APIs
-
-Triggers dbt transformations
-
-Handles retries, logging, and monitoring
-
-Data Warehouse – Snowflake
+> Schedules ETL & ELT pipelines
+> Extracts data from APIs
+> Triggers dbt transformations
+> Handles retries, logging, and monitoring
+> Data Warehouse – Snowflake
 
 RAW Layer: API ingestions
-
 STAGING Layer: Cleaned and standardized tables
-
 ANALYTICS Layer: Curated fact and dimension models (star schema)
 
 Transformation – dbt
-
-Staging & analytics SQL models
-
-Automated testing (quality checks)
-
-Incremental processing
-
-Snapshot tracking for historical attributes
-
-Documentation & lineage generation
+> Staging & analytics SQL models
+> Automated testing (quality checks)
+> Incremental processing
+> Snapshot tracking for historical attributes
+> Documentation & lineage generation
 
 Visualization – Power BI
-
 Interactive dashboards visualize:
-
-Daily/Hourly demand patterns
-
-Regional comparisons
-
-Forecast accuracy
-
-Net generation trends
-
-Weekday vs. weekend behavior
-
-Heat maps & summary matrices
+> Daily/Hourly demand patterns
+> Regional comparisons
+> Forecast accuracy
+> Net generation trends
+> Weekday vs. weekend behavior
+> Heat maps & summary matrices
 
 ## Database Schema (Star Model)
 
@@ -128,7 +110,10 @@ This structure supports flexible slicing by date, region, and metric type.
 Group Project 9
 
 Bavishna Ashok Kumar
+
 Elsa Rose
+
 Kruthika Virupakshappa
+
 Shruti Naik
 
