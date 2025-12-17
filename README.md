@@ -13,33 +13,22 @@ The system uses a modern data stack—Apache Airflow, Snowflake, dbt, and Power 
 
 ## Key Features
 
-Automated ETL/ELT workflows using Airflow
-
-Historical + Real-time data integration
-
-Cloud-native data warehousing with Snowflake
-
-Modular SQL transformations using dbt
-
-Star-schema analytics model for fast querying
-
-Interactive Power BI dashboards showing trends, regional behavior, KPIs, and heatmaps
-
-Scalable and reproducible architecture suitable for production deployment
+1. Automated ETL/ELT workflows using Airflow
+2. Historical + Real-time data integration
+3. Cloud-native data warehousing with Snowflake
+4. Modular SQL transformations using dbt
+5. Star-schema analytics model for fast querying
+6. Interactive Power BI dashboards showing trends, regional behavior, KPIs, and heatmaps
+7. Scalable and reproducible architecture suitable for production deployment
 
 ## Data Sources
 1. EIA Historical Data
 
 Source: U.S. Energy Information Administration (EIA-930)
-
 Granularity: Hourly demand, forecast, generation, interchange
-
 Format: JSON API
-
 Geography: State & regional balancing authorities
-
 Coverage: Multi-year (historical trends)
-
 
 
 ## Architecture
@@ -55,7 +44,7 @@ Handles retries, logging, and monitoring
 
 Data Warehouse – Snowflake
 
-RAW Layer: Unprocessed API ingestions
+RAW Layer: API ingestions
 
 STAGING Layer: Cleaned and standardized tables
 
@@ -94,76 +83,52 @@ Heat maps & summary matrices
 Dimensions:
 
 * DimDate
-
 * DimRegion
-
 * DimSeries
 
 Facts:
 
 * FactRegionHourly
-
 * FactRegionComp
-
 * FactMovingAvg
-
 * FactWeekdayWeekend
 
 This structure supports flexible slicing by date, region, and metric type.
 
 ## Dashboard Insights
 
-Power BI dashboards include:
-
-Peak, minimum, average, and moving-average KPIs
-
-Time-series line charts across series
-
-Regional performance bar charts
-
-Series distribution donut chart
-
-Weekday/weekend summary matrix
-
-Hourly heatmap for load patterns
+1. Power BI dashboards include:
+2. Peak, minimum, average, and moving-average KPIs
+3. Time-series line charts across series
+4. Regional performance bar charts
+5. Series distribution donut chart
+6. Weekday/weekend summary matrix
+7. Hourly heatmap for load patterns
 
 ## Tech Stack
 
-Apache Airflow
-
-Snowflake Cloud Data Warehouse
-
-dbt Core
-
-Power BI / Tableau
-
-Python
-
-REST APIs (EIA, CAISO)
+* Apache Airflow
+* Snowflake Cloud Data Warehouse
+* dbt Core
+* Power BI / Tableau
+* Python
+* REST APIs (EIA)
 
 ## Use Cases
 
-Grid demand forecasting
-
-Renewable integration monitoring
-
-Regional electricity market analysis
-
-Operational planning & reliability studies
-
-Anomaly detection in demand patterns
-
-Real-time situational awareness
+* Grid demand forecasting
+* Renewable integration monitoring
+* Regional electricity market analysis
+* Operational planning & reliability studies
+* Anomaly detection in demand patterns
+* Real-time situational awareness
 
 ## Contributors
 
 Group Project 9
 
 Bavishna Ashok Kumar
-
 Elsa Rose
-
 Kruthika Virupakshappa
-
 Shruti Naik
 
