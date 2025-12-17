@@ -93,21 +93,21 @@ Heat maps & summary matrices
 
 Dimensions:
 
-DimDate
+* DimDate
 
-DimRegion
+* DimRegion
 
-DimSeries
+* DimSeries
 
 Facts:
 
-FactRegionHourly
+* FactRegionHourly
 
-FactRegionComp
+* FactRegionComp
 
-FactMovingAvg
+* FactMovingAvg
 
-FactWeekdayWeekend
+* FactWeekdayWeekend
 
 This structure supports flexible slicing by date, region, and metric type.
 
